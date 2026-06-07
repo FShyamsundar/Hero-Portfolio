@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -81,6 +82,7 @@ export default function App() {
         <Recruiter />
         <NextMission />
       </main>
+      <Analytics />
     </div>
   );
 }
