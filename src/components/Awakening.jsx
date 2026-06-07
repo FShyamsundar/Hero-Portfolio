@@ -26,7 +26,11 @@ import { ChapterTag, Sfx, Speech } from "./ComicElements";
 
 const colorMap = {
   cyan: { panel: "bg-comic-cyan", ink: "text-black", soft: "text-black/80" },
-  yellow: { panel: "bg-comic-yellow", ink: "text-black", soft: "text-black/80" },
+  yellow: {
+    panel: "bg-comic-yellow",
+    ink: "text-black",
+    soft: "text-black/80",
+  },
   red: { panel: "bg-comic-red", ink: "text-white", soft: "text-white/90" },
   navy: { panel: "bg-comic-navy", ink: "text-white", soft: "text-white/90" },
 };
@@ -64,28 +68,30 @@ export default function Awakening() {
           {SKILLS.map((skill, i) => {
             const c = colorMap[skill.color] || colorMap.cyan;
             const isDark = c.ink && c.ink.includes("white");
-            const badgeBase = "inline-flex items-center justify-center border-[3px] border-black rounded-md px-2 py-1 font-bang";
+            const badgeBase =
+              "inline-flex items-center justify-center border-[3px] border-black rounded-md px-2 py-1 font-bang";
             const badgeLeftClass = `${badgeBase} text-sm ${isDark ? "bg-white text-black" : "bg-black/85 text-comic-yellow"}`;
             const badgeRightClass = `${badgeBase} text-[10px] ${isDark ? "bg-white text-black" : "bg-black/85 text-comic-yellow"}`;
             const skillIcons = {
               "React.js": <SiReact size={28} color="#00D8FF" />,
-              "HTML5": <SiHtml5 size={28} color="#E34F26" />,
-              "CSS3": <SiCss size={28} color="#2965F1" />,
-              "Vite": <SiVite size={28} color="#646CFF" />,
+              HTML5: <SiHtml5 size={28} color="#E34F26" />,
+              CSS3: <SiCss size={28} color="#2965F1" />,
+              Vite: <SiVite size={28} color="#646CFF" />,
               "Node.js": <SiNodedotjs size={28} color="#3C873A" />,
               "Express.js": <SiExpress size={28} color="#000000" />,
-              "MySQL": <SiMysql size={28} color="#4479A1" />,
+              MySQL: <SiMysql size={28} color="#4479A1" />,
               MongoDB: <SiMongodb size={28} color="#47A248" />,
-              
-              "JavaScript": <SiJavascript size={28} color="#F0DB4F" />,
+
+              JavaScript: <SiJavascript size={28} color="#F0DB4F" />,
               "Redux Toolkit": <SiRedux size={28} color="#764ABC" />,
               "Tailwind CSS": <SiTailwindcss size={28} color="#38B2AC" />,
               "Socket.io": <SiSocketdotio size={28} color="#010101" />,
               WebRTC: <SiWebrtc size={28} color="#FF6B6B" />,
-              "JWT Authentication": <SiJsonwebtokens size={28} color="#F3732B" />,
-              
+              "JWT Authentication": (
+                <SiJsonwebtokens size={28} color="#F3732B" />
+              ),
+
               Figma: <SiFigma size={28} color="#F24E1E" />,
-              
             };
             return (
               <motion.div
@@ -101,9 +107,7 @@ export default function Awakening() {
                   <span className={badgeLeftClass}>
                     PWR-{(i + 1).toString().padStart(2, "0")}
                   </span>
-                  <span className={badgeRightClass}>
-                    LVL {skill.power}
-                  </span>
+                  <span className={badgeRightClass}>LVL {skill.power}</span>
                 </div>
                 <div className="w-12 h-12 grid place-items-center border-[3px] border-black bg-white text-black rounded-xl font-bang text-xl">
                   {skillIcons[skill.name] || skill.icon}
