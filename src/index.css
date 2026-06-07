@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   SHYAMVERSE — Global comic styles
+   ============================================================ */
+
+:root {
+  --c-yellow: #FFD93D;
+  --c-red: #FF2E63;
+  --c-cyan: #00F0FF;
+  --c-navy: #0A0E27;
+  --c-ink: #0B0B0B;
+  --c-paper: #FFF8E7;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  background: var(--c-paper);
+  color: var(--c-ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar { width: 12px; }
+body::-webkit-scrollbar-track { background: var(--c-navy); }
+body::-webkit-scrollbar-thumb {
+  background: var(--c-yellow);
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+::selection { background: var(--c-yellow); color: #000; }
+
+/* ---------- COMIC PANEL ---------- */
+.comic-panel {
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 0 #000;
+  position: relative;
+  overflow: hidden;
+}
+.comic-panel-yellow { background: var(--c-yellow); }
+.comic-panel-cyan   { background: var(--c-cyan); }
+.comic-panel-red    { background: var(--c-red); color: #fff; }
+.comic-panel-navy   { background: var(--c-navy); color: #fff; }
+
+/* ---------- HALFTONE BG ---------- */
+.bg-halftone {
+  background-image: radial-gradient(#000 1.2px, transparent 1.4px);
+  background-size: 14px 14px;
+}
+.bg-halftone-white {
+  background-image: radial-gradient(rgba(255,255,255,0.35) 1.2px, transparent 1.4px);
+  background-size: 14px 14px;
+}
+.bg-halftone-fade {
+  background-image: radial-gradient(rgba(0,0,0,0.18) 1px, transparent 1.2px);
+  background-size: 16px 16px;
+}
+
+/* ---------- COMIC CITY SKYLINE (pure CSS) ---------- */
+.city-bg {
+  background:
+    linear-gradient(180deg, #0A0E27 0%, #1A1F3A 60%, #2a1654 100%);
+  position: relative;
+}
+.city-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 80px 80px, 120px 120px;
+  background-position: 0 0, 40px 60px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.city-skyline {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 38%;
+  background:
+    linear-gradient(180deg, transparent, rgba(0,0,0,0.6)),
+    repeating-linear-gradient(
+      90deg,
+      #0a0e27 0 28px,
+      #131a3f 28px 36px,
+      #0a0e27 36px 80px,
+      #1f2950 80px 104px,
+      #0a0e27 104px 140px
+    );
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 30%);
+          mask-image: linear-gradient(180deg, transparent 0, #000 30%);
+}
+.city-windows {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 38%;
+  background-image:
+    radial-gradient(rgba(255,217,61,0.85) 1.2px, transparent 1.6px);
+  background-size: 14px 18px;
+  -webkit-mask-image: linear-gradient(180deg, transparent 35%, #000 60%, #000 100%);
+          mask-image: linear-gradient(180deg, transparent 35%, #000 60%, #000 100%);
+  opacity: 0.7;
+}
+
+/* ---------- BURST / ACTION STAR ---------- */
+.burst {
+  --b-size: 220px;
+  width: var(--b-size); height: var(--b-size);
+  background: var(--c-yellow);
+  display: inline-flex; align-items: center; justify-content: center;
+  text-align: center;
+  border: 4px solid #000;
+  clip-path: polygon(
+    50% 0%, 60% 15%, 78% 5%, 78% 25%, 95% 22%, 85% 38%,
+    100% 50%, 85% 62%, 95% 78%, 78% 75%, 78% 95%, 60% 85%,
+    50% 100%, 40% 85%, 22% 95%, 22% 75%, 5% 78%, 15% 62%,
+    0% 50%, 15% 38%, 5% 22%, 22% 25%, 22% 5%, 40% 15%
+  );
+  box-shadow: 8px 8px 0 #000;
+}
+
+/* ---------- SPEECH BUBBLE ---------- */
+.speech {
+  position: relative;
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 28px;
+  padding: 18px 24px;
+  box-shadow: 6px 6px 0 #000;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  color: #000;
+}
+.speech::after {
+  content: '';
+  position: absolute;
+  left: 36px; bottom: -28px;
+  width: 0; height: 0;
+  border-left: 18px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 30px solid #000;
+}
+.speech::before {
+  content: '';
+  position: absolute;
+  left: 40px; bottom: -20px;
+  width: 0; height: 0;
+  border-left: 12px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 22px solid #fff;
+  z-index: 1;
+}
+.speech.right::after { left: auto; right: 36px; border-left: 8px solid transparent; border-right: 18px solid transparent; }
+.speech.right::before { left: auto; right: 40px; border-left: 6px solid transparent; border-right: 12px solid transparent; }
+
+/* THOUGHT bubble (cloud) */
+.thought {
+  position: relative;
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 60px;
+  padding: 18px 26px;
+  box-shadow: 6px 6px 0 #000;
+}
+
+/* ---------- COMIC BUTTON ---------- */
+.btn-comic {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.06em;
+  font-size: 1.15rem;
+  padding: 0.85rem 1.4rem;
+  border: 3px solid #000;
+  border-radius: 10px;
+  background: var(--c-yellow);
+  color: #000;
+  box-shadow: 6px 6px 0 #000;
+  transition: transform .12s ease, box-shadow .12s ease, background .2s;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.btn-comic:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 #000; }
+.btn-comic:active { transform: translate(3px,3px); box-shadow: 2px 2px 0 #000; }
+.btn-comic.red   { background: var(--c-red); color: #fff; }
+.btn-comic.cyan  { background: var(--c-cyan); color: #000; }
+.btn-comic.navy  { background: var(--c-navy); color: #fff; }
+.btn-comic.white { background: #fff; color: #000; }
+
+/* ---------- BIG COMIC TITLE ---------- */
+.comic-title {
+  font-family: 'Bowlby One', sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--c-yellow);
+  text-shadow:
+    3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000,
+    2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+    12px 12px 0 var(--c-red);
+  line-height: 0.9;
+}
+.comic-title-cyan { color: var(--c-cyan); text-shadow:
+    3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000,
+    12px 12px 0 var(--c-red); }
+.comic-title-white { color: #fff; text-shadow:
+    3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000,
+    10px 10px 0 var(--c-yellow); }
+
+.bang { font-family: 'Bangers', cursive; letter-spacing: 0.04em; }
+.mark { font-family: 'Permanent Marker', cursive; }
+
+/* ---------- STRIPED MOTION LINES ---------- */
+.motion-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0 8px,
+    rgba(0,0,0,0.08) 8px 10px
+  );
+}
+.motion-lines-cyan {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 6px,
+    rgba(0,240,255,0.25) 6px 8px
+  );
+}
+
+/* ---------- TAPE ---------- */
+.tape {
+  position: absolute;
+  width: 110px; height: 26px;
+  background: rgba(255,217,61,0.85);
+  border: 2px dashed rgba(0,0,0,0.35);
+  transform: rotate(-6deg);
+  top: -14px; left: 18px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ---------- KAPOW BADGE ---------- */
+.badge-kapow {
+  display: inline-block;
+  font-family: 'Bangers', cursive;
+  background: var(--c-red);
+  color: #fff;
+  padding: 4px 14px;
+  border: 3px solid #000;
+  transform: rotate(-4deg);
+  box-shadow: 3px 3px 0 #000;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- COMIC PAGE NUMBER ---------- */
+.chapter-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Bangers', cursive;
+  font-size: 1.2rem;
+  background: #000; color: var(--c-yellow);
+  padding: 6px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.12em;
+}
+
+/* ---------- CARD HOVER POP ---------- */
+.pop-card { transition: transform .2s ease, box-shadow .2s ease; }
+.pop-card:hover { transform: translate(-4px,-4px) rotate(-1deg); box-shadow: 12px 12px 0 #000; }
+
+/* ---------- HERO COIN SPIN ---------- */
+.coin {
+  width: 70px; height: 70px; border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #fff5a8, #FFD93D 60%, #b88500);
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'Bowlby One', sans-serif; color: #000; font-size: 28px;
+}
+
+/* ---------- SCROLL UTIL ---------- */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ---------- MOBILE TWEAKS ---------- */
+@media (max-width: 640px) {
+  .comic-title { text-shadow:
+    2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    6px 6px 0 var(--c-red); }
+  .burst { --b-size: 150px; }
+  .comic-panel { box-shadow: 5px 5px 0 #000; }
+}
