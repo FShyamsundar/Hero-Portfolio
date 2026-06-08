@@ -71,7 +71,7 @@ export const MISSIONS = [
   {
     code: "MISSION 001",
     title: "Focus-Room",
-    role: "Lead Full Stack Engineer",
+    
     status: "Completed",
     accent: "cyan",
     story:
@@ -100,7 +100,7 @@ export const MISSIONS = [
   {
     code: "MISSION 002",
     title: "Online Food Delivery System",
-    role: "Full Stack Developer",
+    
     status: "Completed",
     accent: "red",
     story:
@@ -121,7 +121,7 @@ export const MISSIONS = [
   {
     code: "MISSION 003",
     title: "Role-Based Task Management Dashboard",
-    role: "Full Stack Developer",
+    
     status: "Completed",
     accent: "yellow",
     story:
