@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://shyamverse-the-fullstack-hero-portfolio.vercel.app/sitemap.xml
+Host: https://shyamverse-the-fullstack-hero-portfolio.vercel.app

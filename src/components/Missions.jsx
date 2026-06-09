@@ -34,7 +34,7 @@ export default function Missions() {
     >
       <div className="absolute inset-0 bg-halftone-fade bg-dots opacity-50 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <ChapterTag number="03" title="MISSION ARCHIVES" />
+        <ChapterTag number="02" title="MISSION ARCHIVES" />
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <h2 className="comic-title text-[12vw] sm:text-[8vw] lg:text-7xl">
@@ -69,7 +69,7 @@ function MissionCard({ m, flip }) {
     >
       {/* Story panel */}
       <div
-      className={`comic-panel p-6 sm:p-8 ${accent.panel} ${accent.ink} lg:col-span-7 min-w-0 ${flip ? "lg:order-2" : ""}`}
+        className={`comic-panel p-6 sm:p-8 ${accent.panel} ${accent.ink} lg:col-span-7 min-w-0 ${flip ? "lg:order-2" : ""}`}
       >
         <div className="flex items-center justify-between mb-4">
           <span className="font-bang text-lg bg-black text-comic-yellow px-3 py-1 rounded">
@@ -82,21 +82,27 @@ function MissionCard({ m, flip }) {
         <h3 className="font-hero text-3xl sm:text-5xl leading-[0.95] break-words">
           {m.title}
         </h3>
-        <p className={`mt-1 font-bang tracking-wider break-words ${accent.soft}`}>
+        <p
+          className={`mt-1 font-bang tracking-wider break-words ${accent.soft}`}
+        >
           {m.role}
         </p>
-        <p className={`mt-5 text-[16px] leading-relaxed font-comic break-words ${accent.soft}`}>
+        <p
+          className={`mt-5 text-[16px] leading-relaxed font-comic break-words ${accent.soft}`}
+        >
           {m.story}
         </p>
 
         <div className="mt-6 grid sm:grid-cols-2 gap-3">
           {m.features.map((f) => (
-              <div
-                key={f}
-                className="flex items-start gap-2 bg-white/90 text-black border-[3px] border-black rounded-lg p-3 min-w-0"
-              >
+            <div
+              key={f}
+              className="flex items-start gap-2 bg-white/90 text-black border-[3px] border-black rounded-lg p-3 min-w-0"
+            >
               <FiCheckCircle className="mt-1 shrink-0 text-comic-red" />
-              <span className="text-sm font-comic font-bold break-words">{f}</span>
+              <span className="text-sm font-comic font-bold break-words">
+                {f}
+              </span>
             </div>
           ))}
         </div>

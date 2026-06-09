@@ -31,7 +31,7 @@ export default function Recruiter() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-7">
-          <ChapterTag number="08" title="RECRUITER'S GUILD" />
+          <ChapterTag number="07" title="RECRUITER'S GUILD" />
           <h2 className="comic-title text-[12vw] sm:text-[8vw] lg:text-7xl">
             MEET
             <br />
@@ -46,8 +46,8 @@ export default function Recruiter() {
 
           <p className="mt-6 font-comic text-lg leading-relaxed max-w-2xl">
             My background blends engineering rigor with a designer's eye for
-            detail. I think in user stories, speak in REST endpoints, and
-            dream in component trees. When I'm not shipping code, I'm
+            detail. I think in user stories, speak in REST endpoints, and dream
+            in component trees. When I'm not shipping code, I'm
             reverse-engineering interesting products to learn how they tick.
           </p>
 

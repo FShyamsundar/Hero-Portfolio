@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Analytics } from "@vercel/analytics/react";
@@ -13,10 +13,13 @@ import Battle from "./components/Battle";
 import Arsenal from "./components/Arsenal";
 import Recruiter from "./components/Recruiter";
 import NextMission from "./components/NextMission";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+
   useEffect(() => {
     const reduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -74,14 +77,18 @@ export default function App() {
       <main>
         <Hero />
         <Origin />
-        <Awakening />
         <Missions />
-        <PowerUps />
         <Battle />
+        <Awakening />
+        <PowerUps />
         <Arsenal />
         <Recruiter />
-        <NextMission />
+        <NextMission onOpenPrivacy={() => setIsPrivacyOpen(true)} />
       </main>
+      <PrivacyPolicy
+        isOpen={isPrivacyOpen}
+        onClose={() => setIsPrivacyOpen(false)}
+      />
       <Analytics />
     </div>
   );

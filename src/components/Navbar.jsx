@@ -5,10 +5,10 @@ import { FiMenu, FiX } from "react-icons/fi";
 const LINKS = [
   ["Hero", "hero"],
   ["Origin", "origin"],
-  ["Powers", "awakening"],
   ["Missions", "missions"],
-  ["Certificates", "certificates"],
   ["Battles", "battles"],
+  ["Powers", "awakening"],
+  ["Power Ups", "certificates"],
   ["Arsenal", "arsenal"],
   ["About", "recruiter"],
   ["Contact", "contact"],

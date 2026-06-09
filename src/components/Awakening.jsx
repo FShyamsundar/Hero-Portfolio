@@ -46,7 +46,7 @@ export default function Awakening() {
       <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-comic-cyan rounded-full blur-3xl opacity-25" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <ChapterTag number="02" title="THE AWAKENING" tone="dark" />
+        <ChapterTag number="04" title="THE AWAKENING" tone="dark" />
 
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
           <h2 className="comic-title-cyan comic-title text-[12vw] sm:text-[8vw] lg:text-7xl">

@@ -1,88 +1,110 @@
-# SHYAMVERSE — Rise of the Full Stack Hero
+# Shyam Sundar — Full Stack Developer Portfolio
 
-A comic-book themed portfolio for **F. Shyam Sundar**, Full Stack Developer (Chennai, India). Built with React + Vite + Tailwind + Framer Motion + GSAP ScrollTrigger + Lenis smooth scrolling.
+This is the recruiter-ready portfolio of **Shyam Sundar**, a modern Full Stack Developer specializing in professional web applications, performance-focused interfaces, and polished technical storytelling.
 
-> Recruiters open the site and immediately think: *"Wow. This is not a normal portfolio."*
-
----
-
-## ✨ Features
-
-- 10 comic-book chapters: Hero, Origin, Awakening (Skills), Missions (Projects), Achievement Vault, Power-Ups (Certificates), Battle History (Internships), Arsenal (Tools), Recruiter's Guild (About), and The Next Mission (Contact).
-- **Code-first comic style** — speech bubbles, halftone dots, action bursts, comic borders, KAPOW SFX, all built with CSS. No heavy PNG dependency.
-- Smooth scroll with **Lenis**, scroll-driven parallax with **GSAP ScrollTrigger**, panel-reveal animations with **Framer Motion**.
-- Fully **responsive** — desktop, tablet, mobile. Sidebar collapses to a drawer.
-- Custom Tailwind theme with the comic palette (Yellow / Red / Cyan / Navy / White).
+> This repository is a personal portfolio intended for recruiter review, professional outreach, and showcasing real engineering capability.
 
 ---
 
-## 🚀 Getting Started
+## Portfolio Summary
+
+- **Owner:** Shyam Sundar
+- **Role:** Full Stack Developer
+- **Focus:** React, Vite, Tailwind, responsive UI, motion interactions, and recruiter-friendly case presentation.
+- **Purpose:** Showcase projects, skills, experience, and direct contact information in a clean professional format.
+
+---
+
+## Career‑Ready Pages
+
+- Hero introduction
+- Origin story
+- Mission portfolio / projects
+- Work / battle history
+- Technical skills and power-ups
+- Tools and technology arsenal
+- Recruiter-focused about section
+- Contact / next mission call to action
+- Privacy policy and legal disclosure
+
+---
+
+## Features
+
+- Lightweight **React + Vite** build for fast page loads.
+- Responsive layouts for desktop, tablet, and mobile.
+- Recruiter-first content flow with clear section anchors.
+- Professional UI with modern typography, comic-inspired accent styling, and strong information hierarchy.
+- Privacy policy page for trust and compliance.
+- SEO-ready metadata, `robots.txt`, and `sitemap.xml` support.
+
+---
+
+## Quick Start
 
 ```bash
-# 1. Install deps
 npm install
-
-# 2. Run dev server
 npm run dev
-# open http://localhost:3000
+```
 
-# 3. Production build
+Build for production:
+
+```bash
 npm run build
 npm run preview
 ```
 
-Node 18+ recommended.
-
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
-```
-shyamverse/
-├── index.html
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-├── vite.config.js
-├── public/
-│   └── favicon.svg
-└── src/
-    ├── main.jsx
-    ├── App.jsx
-    ├── index.css                 # comic styles, halftone, bursts, speech bubbles
-    ├── hooks/
-    │   └── useLenis.js
-    ├── data/
-    │   └── content.js            # all hero / skills / missions copy
-    └── components/
-        ├── ComicElements.jsx     # reusable Burst, Speech, Panel, Sfx
-        ├── Navbar.jsx
-        ├── Hero.jsx              # Issue #001 — Origin
-        ├── Origin.jsx            # Chapter 1
-        ├── Awakening.jsx         # Chapter 2 — Skills
-        ├── Missions.jsx          # Chapter 3 — Projects
-        ├── Achievements.jsx      # Chapter 4
-        ├── PowerUps.jsx          # Chapter 5 — Certificates
-        ├── Battle.jsx            # Chapter 6 — Experience
-        ├── Arsenal.jsx           # Chapter 7 — Tools
-        ├── Recruiter.jsx         # Chapter 8 — About
-        └── NextMission.jsx       # Final Chapter — Contact
+```text
+src/
+├── App.jsx
+├── index.css
+├── main.jsx
+├── components/
+│   ├── ComicElements.jsx
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── Origin.jsx
+│   ├── Missions.jsx
+│   ├── Awakening.jsx
+│   ├── PowerUps.jsx
+│   ├── Battle.jsx
+│   ├── Arsenal.jsx
+│   ├── Recruiter.jsx
+│   ├── NextMission.jsx
+│   └── PrivacyPolicy.jsx
+└── data/
+    └── content.js
 ```
 
 ---
 
-## 🎨 Customising
+## Legal and Usage
 
-- All copy lives in `src/data/content.js` — edit names, projects, skills, certificates there.
-- Color tokens in `tailwind.config.js → theme.extend.colors.comic`.
-- Comic primitives in `src/index.css` (`.comic-panel`, `.speech`, `.burst`, `.btn-comic`, `.bg-halftone`...).
+This portfolio is protected by a proprietary license.
+
+- © 2026 Shyam Sundar. All Rights Reserved.
+- No copying allowed.
+- No redistribution allowed.
+- No modification allowed.
+- No commercial use allowed.
+- Permission is required before using any part of this project.
 
 ---
 
-## 🧪 Tech Stack
+## Contact
 
-React 18 · Vite 5 · Tailwind 3 · Framer Motion 11 · GSAP 3 (ScrollTrigger) · Lenis · React Icons · Lottie React.
+Email: `sundarshyam27241@gmail.com`
+
+LinkedIn: https://www.linkedin.com/in/shyam-sundar-f-35a8a524a/
+
+GitHub: https://github.com/FShyamsundar
 
 ---
 
-Made with ☕, ⚡ and a lot of `console.log`.
+## License
+
+See `LICENSE` for the full custom proprietary license terms.

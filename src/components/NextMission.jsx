@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 import { ChapterTag, Sfx, Speech } from "./ComicElements";
 
-export default function NextMission() {
+export default function NextMission({ onOpenPrivacy }) {
   const [showEmailPanel, setShowEmailPanel] = useState(false);
   const [copyMessage, setCopyMessage] = useState("");
   const [messageBody, setMessageBody] = useState(
@@ -267,6 +267,14 @@ export default function NextMission() {
                 <li>
                   <a
                     className="underline decoration-black/30 hover:text-black"
+                    href="#origin"
+                  >
+                    Origin
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline decoration-black/30 hover:text-black"
                     href="#missions"
                   >
                     Missions
@@ -275,9 +283,41 @@ export default function NextMission() {
                 <li>
                   <a
                     className="underline decoration-black/30 hover:text-black"
+                    href="#battles"
+                  >
+                    Battles
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline decoration-black/30 hover:text-black"
+                    href="#awakening"
+                  >
+                    Powers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline decoration-black/30 hover:text-black"
                     href="#certificates"
                   >
-                    Certificates
+                    Power Ups
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline decoration-black/30 hover:text-black"
+                    href="#arsenal"
+                  >
+                    Arsenal
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline decoration-black/30 hover:text-black"
+                    href="#recruiter"
+                  >
+                    About
                   </a>
                 </li>
                 <li>
@@ -287,6 +327,14 @@ export default function NextMission() {
                   >
                     Contact
                   </a>
+                </li>
+                <li>
+                  <button
+                    onClick={onOpenPrivacy}
+                    className="underline decoration-black/30 hover:text-black text-left"
+                  >
+                    Privacy Policy
+                  </button>
                 </li>
               </ul>
             </div>
@@ -342,7 +390,7 @@ export default function NextMission() {
               </a>
             </div>
             <div className="text-xs opacity-80 leading-relaxed">
-              © {new Date().getFullYear()} F. Shyam Sundar. All rights reserved.
+              © 2026 Shyam Sundar. All Rights Reserved.
             </div>
           </div>
         </div>
