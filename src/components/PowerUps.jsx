@@ -26,7 +26,7 @@ export default function PowerUps() {
       <div className="absolute inset-0 bg-halftone-white bg-dots opacity-20 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <ChapterTag number="05" title="CERTIFICATES" tone="dark" />
+        <ChapterTag number="05" title="POWER UPS" tone="dark" />
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <h2 className="comic-title-cyan comic-title text-[12vw] sm:text-[8vw] lg:text-7xl">
             POWER - UPS

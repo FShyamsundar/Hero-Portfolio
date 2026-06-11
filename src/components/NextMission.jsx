@@ -45,7 +45,7 @@ export default function NextMission({ onOpenPrivacy }) {
       <div className="absolute inset-0 bg-halftone-white bg-dots opacity-20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <ChapterTag number="∞" title="THE NEXT MISSION" tone="dark" />
+        <ChapterTag number="08" title="THE NEXT MISSION" tone="dark" />
 
         <div className="grid lg:grid-cols-12 gap-10 items-center mt-6">
           <div className="lg:col-span-7">
@@ -275,17 +275,17 @@ export default function NextMission({ onOpenPrivacy }) {
                 <li>
                   <a
                     className="underline decoration-black/30 hover:text-black"
-                    href="#missions"
+                    href="#battles"
                   >
-                    Missions
+                    Battles
                   </a>
                 </li>
                 <li>
                   <a
                     className="underline decoration-black/30 hover:text-black"
-                    href="#battles"
+                    href="#missions"
                   >
-                    Battles
+                    Missions
                   </a>
                 </li>
                 <li>

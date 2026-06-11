@@ -34,7 +34,7 @@ export default function Missions() {
     >
       <div className="absolute inset-0 bg-halftone-fade bg-dots opacity-50 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <ChapterTag number="02" title="MISSION ARCHIVES" />
+        <ChapterTag number="03" title="MISSION ARCHIVES" />
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <h2 className="comic-title text-[12vw] sm:text-[8vw] lg:text-7xl">

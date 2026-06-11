@@ -77,8 +77,8 @@ export default function App() {
       <main>
         <Hero />
         <Origin />
-        <Missions />
         <Battle />
+        <Missions />
         <Awakening />
         <PowerUps />
         <Arsenal />

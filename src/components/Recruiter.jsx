@@ -31,7 +31,7 @@ export default function Recruiter() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-7">
-          <ChapterTag number="07" title="RECRUITER'S GUILD" />
+          <ChapterTag number="07" title="ABOUT THE HERO" />
           <h2 className="comic-title text-[12vw] sm:text-[8vw] lg:text-7xl">
             MEET
             <br />
