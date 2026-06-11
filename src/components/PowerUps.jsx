@@ -31,9 +31,8 @@ export default function PowerUps() {
           <h2 className="comic-title-cyan comic-title text-[12vw] sm:text-[8vw] lg:text-7xl">
             POWER - UPS
             <br />
-            
           </h2>
-          <Sfx color="yellow" rotate={-6} >
+          <Sfx color="yellow" rotate={-6}>
             ARCHIVE!
           </Sfx>
         </div>
@@ -45,7 +44,11 @@ export default function PowerUps() {
               initial={{ opacity: 0, scale: 0.85, y: 30 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.08,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               whileHover={{ y: -8, rotate: 0 }}
               className="relative comic-panel bg-white text-black p-5 sm:p-6 pop-card"
               style={{ rotate: `${i % 2 ? 1 : -1}deg` }}
